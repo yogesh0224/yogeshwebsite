@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogesh - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMDfSv6dPgN2dGr1i0yk7Ycv0vYb69Xf0ZCKJEm" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+    <div class="logo">
+        <h1>Yogesh</h1>
+    </div>
+    <ul id="nav-list">
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="path/to/your-cv.pdf" class="cv-button" download>Download CV</a></li>
+    </ul>
+
+    <!-- Hamburger for mobile view -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-name">YOGESH LUITEL</h1>
+            <p class="hero-title">
+                <span id="typing1"></span> <!-- Place for typed text -->
+            </p>
+            <p class="hero-description">
+                <span id="typing2"></span> <!-- Place for typed text -->
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+<section id="about" class="about-section">
+    <div class="background-animation"></div>
+    <div class="about-container">
+        <div class="about-image">
+            <img src="pp_photo.jpeg" alt="Yogesh" class="circular-image">
+        </div>
+        <div class="about-info">
+            <h2 class="about-name">Yogesh</h2>
+            <p class="about-introduction">I am a passionate web developer and cyber policy enthusiast dedicated to improving digital security.</p>
+            <p class="about-details">
+                With a background in information technology and passion for policy advocacy in digital transformation, I combine technical skills with a strong understanding of policy. My goal is to contribute to developing robust cyber policies in Nepal.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <h2 class="projects-title">My Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <img src="Navy White Yellow Modern Minimalist Congratulation Job Promotion Greeting Facebook Post(4).png" alt="Project 1" class="project-image">
+            <h3 class="project-title">Project Title 1</h3>
+            <p class="project-description">A brief description of the first project. It highlights the main features and technologies used.</p>
+            <a href="https://link-to-your-project1.com" target="_blank" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+            <img src="marathon 2.png" alt="Project 2" class="project-image">
+            <h3 class="project-title">Project Title 2</h3>
+            <p class="project-description">A brief description of the second project. It highlights the main features and technologies used.</p>
+            <a href="https://link-to-your-project2.com" target="_blank" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+            <img src="marathon 3.png" alt="Project 3" class="project-image">
+            <h3 class="project-title">Project Title 3</h3>
+            <p class="project-description">A brief description of the third project. It highlights the main features and technologies used.</p>
+            <a href="https://link-to-your-project3.com" target="_blank" class="project-link">View Project</a>
+        </div>
+    </div>
+    <div class="show-more-container">
+        <a href="#more-projects" class="show-more-link">Show More Projects</a>
+</section>
+
+<!-- Publications Section -->
+<section id="publications" class="publications-section">
+    <h2 class="publications-title">My Publications</h2>
+    <div class="publications-container">
+        <div class="publication-card">
+            <img src="Screenshot 2024-10-17 121425.png" alt="Publication 1" class="publication-image">
+            <h3 class="publication-title">Publication Title 1</h3>
+            <p class="publication-description">A brief description of the first publication, outlining the key findings and contributions.</p>
+            <a href="https://link-to-your-publication1.com" target="_blank" class="publication-link">Read Publication</a>
+        </div>
+        <div class="publication-card">
+            <img src="Screenshot 2024-10-17 121453.png" alt="Publication 2" class="publication-image">
+            <h3 class="publication-title">Publication Title 2</h3>
+            <p class="publication-description">A brief description of the second publication, outlining the key findings and contributions.</p>
+            <a href="https://link-to-your-publication2.com" target="_blank" class="publication-link">Read Publication</a>
+        </div>
+        <div class="publication-card">
+            <img src="Screenshot 2024-10-17 121520.png" alt="Publication 3" class="publication-image">
+            <h3 class="publication-title">Publication Title 3</h3>
+            <p class="publication-description">A brief description of the third publication, outlining the key findings and contributions.</p>
+            <a href="https://link-to-your-publication3.com" target="_blank" class="publication-link">Read Publication</a>
+        </div>
+    </div>
+    <div class="show-more-container">
+        <a href="#more-publications" class="show-more-link">Show More Publications</a>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2 class="contact-title">Get in Touch</h2>
+    <div class="contact-container">
+        <div class="contact-info-box">
+            <h3>Contact Information</h3>
+            <p><strong>Email:</strong> <a href="mailto:your.email@example.com">yogeshluitel9@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+1234567890">+977 9805334149</a></p>
+            <p><strong>Address:</strong> Kathmandu, Nepal</p>
+            <div class="social-icons">
+                <a href="https://github.com/yourusername" target="_blank" class="social-icon">🐱</a> <!-- GitHub icon -->
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon">🔗</a> <!-- LinkedIn icon -->
+                <a href="https://instagram.com/yourusername" target="_blank" class="social-icon">📸</a> <!-- Instagram icon -->
+                
+            </div>
+            
+        </div>
+        <div class="contact-form-box">
+            <h3>Send a Message</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <h4>Contact Info</h4>
+            <p><strong>Email:</strong> yogeshluitel9@gmail.com</p>
+            <p><strong>Phone:</strong> +977 9805334149</p>
+            <p><strong>Address:</strong> Kathmandu, Nepal</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon">📱</a>
+                <a href="#" class="social-icon">💻</a>
+                <a href="#" class="social-icon">📧</a>
+            </div>
+        </div>
+    </div>
+    <button id="back-to-top" class="back-to-top">Back to Top</button>
+    <p class="footer-note">© 2024 Your Name. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

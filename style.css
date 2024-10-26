@@ -1,0 +1,994 @@
+/* General body styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Elegant font */
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+}
+
+/* Navbar Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(45, 156, 219, 0.9), rgba(0, 78, 146, 0.9)); /* Smooth gradient with transparency */
+    padding: 15px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for emphasis */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Always on top */
+    transition: background-color 0.4s ease;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase; /* More professional look */
+    letter-spacing: 1px; /* Added spacing for a clean feel */
+}
+
+#nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-list li {
+    margin: 0 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: white;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    padding: 10px 15px;
+    border-radius: 8px; /* Rounded corners for a softer feel */
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight translucent background on hover */
+    color: #FFDD57; /* Warm golden-yellow for hover effect */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Soft shadow effect on hover */
+}
+
+/* CV Button */
+.cv-button {
+    background-color: #FF6B6B; /* Warm red background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+}
+
+.cv-button:hover {
+    background-color: #FF3B3B; /* Darker red on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/* Mobile Menu */
+#nav-list.mobile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 78, 146, 0.95); /* Matching with navbar, slightly darker */
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#nav-list.mobile li {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#nav-list.mobile .nav-link {
+    padding: 15px 0;
+    width: 100%;
+    display: block;
+    color: white;
+}
+
+/* Hamburger Menu Active State */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    #nav-list {
+        display: none;
+    }
+
+    #nav-list.mobile {
+        display: flex;
+    }
+}
+
+
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(abstract-uv-ultraviolet-light-composition.jpg);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif; /* More modern and readable font */
+    margin-top: 70px; /* to account for fixed navbar */
+    padding: 0 20px; /* Responsive padding for smaller devices */
+}
+
+.hero-content {
+    opacity: 0;
+    animation: fadeIn 2s forwards, moveUp 2s forwards;
+}
+
+/* Larger Name */
+.hero-name {
+    font-size: 6.5rem; /* Larger font for your name */
+    font-weight: 800;  /* Extra bold */
+    color: #ffffff;
+    margin: 0;
+    animation: nameFadeIn 2s ease-in forwards;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Strong glow effect */
+}
+
+/* Larger Title with Refined Font */
+.hero-title {
+    font-size: 3.5rem; /* Increased font size for title */
+    font-weight: 400;
+    color: #09ed64;
+    margin: 20px 0;
+}
+
+/* Slightly Larger Description with Better Contrast */
+.hero-description {
+    font-size: 2.5rem; /* Larger font size for description */
+    font-weight: 400;
+    color: #fc1212;
+    margin: 15px 0;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes nameFadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 4rem; /* Smaller for mobile screens */
+    }
+
+    .hero-title {
+        font-size: 2rem; /* Adjusted for mobile */
+    }
+
+    .hero-description {
+        font-size: 1.5rem; /* Adjusted for mobile */
+    }
+}
+
+
+/* About Section Styles */
+.about-section {
+    position: relative; /* Position for the background */
+    overflow: hidden; /* Hide overflow */
+    padding: 60px 20px;
+    color: white; /* Text color */
+    background: linear-gradient(135deg, #282c34, #353b48);
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   background-image: url(abstract-uv-ultraviolet-light-composition.jpg);
+    opacity: 0.8; /* Semi-transparent background */
+    z-index: 1; /* Send background to back */
+    animation: gradientAnimation 5s ease infinite; /* Gradient animation */
+}
+
+/* Container Styles */
+.about-container {
+    
+    display: flex;
+    align-items: center;
+    max-width: 1200px; /* Maximum width for the container */
+    width: 100%; /* Full width */
+    position: relative; /* Relative for text overlay */
+    z-index: 2; /* Bring the content to the front */
+}
+
+/* Circular Image Styles */
+.about-image {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    position: relative; /* Positioning for animation */
+}
+
+.circular-image {
+    width: 150px; /* Set desired width */
+    height: 150px; /* Set desired height */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the circular area */
+    border: 5px solid #ffffff; /* White border for the image */
+    box-shadow: 0 0px 20px rgba(0, 123, 255, 0.5); /* Shadow effect */
+    animation: pulseGlow 3s infinite; /* Pulsing animation */
+}
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(0, 123, 255, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(0, 123, 255, 0.8); }
+}
+/* About Information Styles */
+.about-info {
+    margin-left: 20px; /* Space between image and text */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+    animation: fadeIn 1s; /* Fade-in effect */
+}
+
+.about-name {
+    font-size: 2.5rem; /* Name size */
+    color: #ffffff; /* White color for the name */
+    margin: 0; /* Remove default margin */
+    animation: slideInLeft 1s ease-out; /* Slide-in effect */
+}
+
+.about-introduction {
+    font-size: 1.3rem; /* Introduction size */
+    color: #e0e0e0;
+    margin: 10px 0; /* Space for margin */
+    animation: slideInRight 1s ease-out;
+}
+@keyframes slideInLeft {
+    0% { transform: translateX(-50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInRight {
+    0% { transform: translateX(50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes fadeInUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.about-details {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-top: 10px; /* Space between paragraphs */
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Animation Keyframes */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack elements on smaller screens */
+        align-items: center; /* Center align */
+    }
+
+    .about-info {
+        margin-left: 0; /* Remove margin */
+        text-align: center; /* Center text */
+    }
+}
+
+/* Projects Section Styles */
+.projects-section {
+    padding: 50px 20px;
+    background: #f9f9f9; /* Light background for contrast */
+    text-align: center; /* Center-align text */
+}
+
+.projects-title {
+    font-size: 2.5rem; /* Title size */
+    margin-bottom: 20px; /* Space below title */
+    color: #333; /* Dark color for title */
+    overflow: hidden; /* Hide overflow for typewriter effect */
+    white-space: nowrap; /* Prevent text wrapping */
+    border-right: .15em solid #007BFF; /* Typewriter cursor effect */
+    width: 0; /* Start width */
+    animation: typewriter 4s forwards; /* Typewriter animation */
+}
+
+/* Projects Container Styles */
+.projects-container {
+    display: flex;
+    justify-content: space-around; /* Space between cards */
+    flex-wrap: wrap; /* Wrap to new line if needed */
+    gap: 20px; /* Gap between cards */
+}
+
+.project-card {
+    background: white; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    width: 300px; /* Fixed width for cards */
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.project-image {
+    width: 100%; /* Full width image */
+    height: 200px; /* Fixed height for image */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.project-title {
+    font-size: 1.5rem; /* Title size */
+    color: #333; /* Dark color for title */
+    margin: 10px 0; /* Margin around title */
+}
+
+.project-description {
+    font-size: 1rem; /* Description size */
+    color: #555; /* Slightly lighter color */
+    padding: 0 15px; /* Padding for text */
+}
+
+.project-link {
+    display: inline-block; /* Block display for button */
+    margin: 15px; /* Margin for spacing */
+    padding: 10px 20px; /* Padding for button */
+    background: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners for button */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s; /* Smooth hover effect */
+}
+
+.project-link:hover {
+    background: #0056b3; /* Darker shade on hover */
+}
+
+/* Show More Projects Link */
+.show-more-container {
+    margin-top: 20px; /* Space above link */
+}
+
+.show-more-link {
+    font-size: 1.2rem; /* Size for the link */
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Animation for Typewriter Effect */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Expand to full width */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center cards */
+    }
+
+    .project-card {
+        width: 90%; /* Full width for cards */
+    }
+}
+
+/* Publications Section Styles */
+.publications-section {
+    padding: 50px 20px;
+    background: #f0f0f0; /* Slightly different light background for contrast */
+    text-align: center;
+}
+
+.publications-title {
+    font-size: 2.5rem; /* Title size */
+    margin-bottom: 20px; /* Space below title */
+    color: #333; /* Dark color for title */
+    overflow: hidden; /* Hide overflow for typewriter effect */
+    white-space: nowrap; /* Prevent text wrapping */
+    border-right: .15em solid #007BFF; /* Typewriter cursor effect */
+    width: 0; /* Start width */
+    animation: typewriter 4s forwards; /* Typewriter animation */
+}
+
+/* Publications Container Styles */
+.publications-container {
+    display: flex;
+    justify-content: space-around; /* Space between cards */
+    flex-wrap: wrap; /* Wrap to new line if needed */
+    gap: 20px; /* Gap between cards */
+}
+
+.publication-card {
+    background: white; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    width: 300px; /* Fixed width for cards */
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.publication-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.publication-image {
+    width: 100%; /* Full width image */
+    height: 200px; /* Fixed height for image */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.publication-title {
+    font-size: 1.5rem; /* Title size */
+    color: #333; /* Dark color for title */
+    margin: 10px 0; /* Margin around title */
+}
+
+.publication-description {
+    font-size: 1rem; /* Description size */
+    color: #555; /* Slightly lighter color */
+    padding: 0 15px; /* Padding for text */
+}
+
+.publication-link {
+    display: inline-block; /* Block display for button */
+    margin: 15px; /* Margin for spacing */
+    padding: 10px 20px; /* Padding for button */
+    background: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners for button */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s; /* Smooth hover effect */
+}
+
+.publication-link:hover {
+    background: #0056b3; /* Darker shade on hover */
+}
+
+/* Show More Publications Link */
+.show-more-container {
+    margin-top: 20px; /* Space above link */
+}
+
+.show-more-link {
+    font-size: 1.2rem; /* Size for the link */
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Animation for Typewriter Effect */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Expand to full width */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .publications-container {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center cards */
+    }
+/* Navbar Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(45, 156, 219, 0.9), rgba(0, 78, 146, 0.9)); /* Smooth gradient with transparency */
+    padding: 15px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for emphasis */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Always on top */
+    transition: background-color 0.4s ease;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase; /* More professional look */
+    letter-spacing: 1px; /* Added spacing for a clean feel */
+}
+
+#nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-list li {
+    margin: 0 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: white;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    padding: 10px 15px;
+    border-radius: 8px; /* Rounded corners for a softer feel */
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight translucent background on hover */
+    color: #FFDD57; /* Warm golden-yellow for hover effect */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Soft shadow effect on hover */
+}
+
+/* CV Button */
+.cv-button {
+    background-color: #FF6B6B; /* Warm red background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+}
+
+.cv-button:hover {
+    background-color: #FF3B3B; /* Darker red on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/* Mobile Menu */
+#nav-list.mobile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 78, 146, 0.95); /* Matching with navbar, slightly darker */
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#nav-list.mobile li {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#nav-list.mobile .nav-link {
+    padding: 15px 0;
+    width: 100%;
+    display: block;
+    color: white;
+}
+
+/* Hamburger Menu Active State */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    #nav-list {
+        display: none;
+    }
+
+    #nav-list.mobile {
+        display: flex;
+    }
+}
+
+    .publication-card {
+        width: 90%; /* Full width for cards */
+    }
+}
+
+.contact-section {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* Overlay effect */
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease-out; /* Slide in effect */
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.icon {
+    margin-right: 8px;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #FF6B6B;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    z-index: 2;
+    position: relative; /* To contain child elements */
+}
+
+.contact-info-box,
+.contact-form-box {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    flex: 1;
+    margin: 15px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    position: relative; /* To contain hover effects */
+}
+
+.contact-info-box:hover,
+.contact-form-box:hover {
+    transform: translateY(-10px); /* Enhanced lift on hover */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25); /* Stronger shadow */
+    border: 2px solid #007bff;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #007bff; /* Blue accent line */
+    margin-top: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff; /* Change border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
+    outline: none;
+}
+
+button {
+    background-color: #007bff; /* Primary color */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight grow effect */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.social-icon {
+    font-size: 30px;
+    transition: transform 0.3s, color 0.3s; /* Smooth transition */
+    color: #555; /* Icon color */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Scale effect on hover */
+    color: #007bff; /* Change color on hover */
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(135deg, #1a1a1a, #4e4e4e); /* Stylish gradient background */
+    color: white; /* White text color */
+    padding: 30px 20px; /* Ample padding */
+    text-align: center; /* Centered text */
+    position: relative; /* For positioning the back-to-top button */
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Space out links and info */
+    flex-wrap: wrap; /* Wrap for smaller screens */
+}
+
+.footer-links,
+.footer-info {
+    flex: 1; /* Equal space for both sections */
+    margin: 10px; /* Margin around sections */
+}
+
+.footer-links h4,
+.footer-info h4 {
+    margin-bottom: 10px; /* Space below headings */
+    color: #FF6B6B; /* Vibrant heading color */
+}
+
+.footer-links ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links li {
+    margin: 5px 0; /* Space between links */
+}
+
+.footer-links a,
+.footer-info p {
+    color: #FFFFFF; /* White text for links and info */
+    text-decoration: none; /* No underline for links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer-links a:hover {
+    color: #FF6B6B; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Back to Top Button */
+.back-to-top {
+    background: #FF6B6B; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 12px 25px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners for button */
+    position: fixed; /* Fixed position on screen */
+    bottom: 30px; /* Distance from bottom */
+    right: 30px; /* Distance from right */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: none; /* Initially hidden */
+    opacity: 0.8; /* Slight transparency */
+    transition: opacity 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Show button when scrolling down */
+.back-to-top.show {
+    display: block; /* Show button */
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+}
+
+/* Footer Note Styles */
+.footer-note {
+    margin-top: 15px; /* Space above footer note */
+    font-size: 0.9rem; /* Smaller font for note */
+    animation: fadeIn 1s ease-in; /* Fade-in animation */
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
